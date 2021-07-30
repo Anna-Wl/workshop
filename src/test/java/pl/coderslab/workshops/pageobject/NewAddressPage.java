@@ -10,23 +10,23 @@ import pl.coderslab.workshops.UserBasicData;
 
 
 public class NewAddressPage {
-    @FindBy(xpath = "//*[@id=\"content\"]/div/div/form/section/div[1]/div[1]/input")
+    @FindBy(xpath = "//*[@name='alias']")
     private WebElement aliasInput;
-    @FindBy(xpath = "//*[@id=\"content\"]/div/div/form/section/div[6]/div[1]/input")
+    @FindBy(xpath = "//*[@name='address1']")
     private WebElement addressInput;
-    @FindBy(xpath = "//*[@id=\"content\"]/div/div/form/section/div[8]/div[1]/input")
+    @FindBy(xpath = "//*[@name='postcode']")
     private WebElement zipInput;
-    @FindBy(xpath = "//*[@id=\"content\"]/div/div/form/section/div[9]/div[1]/input")
+    @FindBy(xpath = "//*[@name='city']")
     private WebElement cityInput;
-    @FindBy(xpath = "//*[@id=\"content\"]/div/div/form/section/div[10]/div[1]/select")
+    @FindBy(xpath = "//*[@name='id_country']")
     private WebElement countrySelect;
-    @FindBy(xpath = "//*[@name=\"phone\"]")
+    @FindBy(xpath = "//*[@name='phone']")
     private WebElement phoneNumberInput;
-    @FindBy(xpath = "//*[@id=\"content\"]/div/div/form/footer/button")
+    @FindBy(xpath = "//*[@id='content']/div/div/form/footer/button")
     private WebElement saveNewAddressButton;
-    @FindBy(xpath = "//*[@name=\"firstname\"]")
+    @FindBy(xpath = "//*[@name='firstname']")
     private WebElement nameInput;
-    @FindBy(xpath = "//*[@name=\"lastname\"]")
+    @FindBy(xpath = "//*[@name='lastname']")
     private WebElement lastNameInput;
 
 

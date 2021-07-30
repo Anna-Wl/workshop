@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class YourAccountPage {
     private WebDriver driver;
-    @FindBy(xpath = "//*[@id=\"footer_account_list\"]/li[4]/a")
+    @FindBy(xpath = "//*[@title='Addresses']")
     private WebElement addressesLink;
 
 

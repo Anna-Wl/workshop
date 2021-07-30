@@ -6,11 +6,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class MyStoreLogInPage {
-    @FindBy(xpath = "//*[@id=\"_desktop_user_info\"]/div/a")
+    @FindBy(id = "submit-login")
     private WebElement signInLink;
-    @FindBy(xpath = "//*[@id=\"login-form\"]/section/div[1]/div[1]/input")
+    @FindBy(xpath = "//*[@name='email']")
     private WebElement emailToLogin;
-    @FindBy(xpath = "//*[@id=\"login-form\"]/section/div[2]/div[1]/div/input")
+    @FindBy(xpath = "//*[@name='password']")
     private WebElement passwordToLogin;
     @FindBy(id="submit-login")
     private WebElement signInButton;

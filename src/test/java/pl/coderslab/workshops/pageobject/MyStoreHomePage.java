@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class MyStoreHomePage {
-    @FindBy(xpath = "//*[@id=\"_desktop_user_info\"]/div/a")
+    @FindBy(xpath = "//*[@id='_desktop_user_info']/div/a")
     private WebElement signInLink;
 
     public MyStoreHomePage(WebDriver driver) {

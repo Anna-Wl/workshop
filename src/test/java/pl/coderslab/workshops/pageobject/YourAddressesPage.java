@@ -7,11 +7,11 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 public class YourAddressesPage {
-    @FindBy(xpath = "//*[@data-link-action=\"add-address\"]")
+    @FindBy(xpath = "//*[@data-link-action='add-address']")
     private WebElement createNewAddressLink;
     @FindBy(tagName = "address")
     private WebElement results;
-    @FindBy(xpath = "//*[@class=\"address-body\"]/h4")
+    @FindBy(xpath = "//*[@class='address-body']/h4")
     private WebElement aliasResult;
 
 
