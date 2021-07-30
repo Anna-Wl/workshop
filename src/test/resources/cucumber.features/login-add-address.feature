@@ -3,7 +3,8 @@ Feature: Login user and add new address
   Scenario: Login user and add address
     Given Page https://prod-kurs.coderslab.pl/index.php opened in browser
     When Click 'Sign in' link
-    And Enter email 'test@testshop.com' and password 'Padqwe1$'
+    And Enter email 'test@testshop.com'
+    And Enter password 'Padqwe1$'
     And Click 'Sing in' button
     And Click 'Addresses' link
     And Click 'Create new address' link

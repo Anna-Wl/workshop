@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import pl.coderslab.workshops.NewAddressData;
+import pl.coderslab.workshops.UserBasicData;
 
 
 public class NewAddressPage {
@@ -23,6 +24,10 @@ public class NewAddressPage {
     private WebElement phoneNumberInput;
     @FindBy(xpath = "//*[@id=\"content\"]/div/div/form/footer/button")
     private WebElement saveNewAddressButton;
+    @FindBy(xpath = "//*[@name=\"firstname\"]")
+    private WebElement nameInput;
+    @FindBy(xpath = "//*[@name=\"lastname\"]")
+    private WebElement lastNameInput;
 
 
     public NewAddressPage(WebDriver driver) {
@@ -46,6 +51,13 @@ public class NewAddressPage {
 
     public void clickSaveAddressButton() {
         saveNewAddressButton.click();
+    }
+
+    public void saveFirstNameAndLastName(UserBasicData data) {
+        String nameOfUser = nameInput.getAttribute("value");
+        String surnameOfUser = lastNameInput.getAttribute("value");
+        data.setName(nameOfUser);
+        data.setSurname(surnameOfUser);
     }
 }
 

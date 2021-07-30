@@ -26,72 +26,72 @@ formatter.step({
 });
 formatter.step({
   "line": 6,
-  "name": "Enter email \u0027test@testshop.com\u0027 and password \u0027Padqwe1$\u0027",
+  "name": "Enter email \u0027test@testshop.com\u0027",
   "keyword": "And "
 });
 formatter.step({
   "line": 7,
-  "name": "Click \u0027Sing in\u0027 button",
+  "name": "Enter password \u0027Padqwe1$\u0027",
   "keyword": "And "
 });
 formatter.step({
   "line": 8,
-  "name": "Click \u0027Addresses\u0027 link",
+  "name": "Click \u0027Sing in\u0027 button",
   "keyword": "And "
 });
 formatter.step({
   "line": 9,
-  "name": "Click \u0027Create new address\u0027 link",
+  "name": "Click \u0027Addresses\u0027 link",
   "keyword": "And "
 });
 formatter.step({
   "line": 10,
-  "name": "Enter alias \u0027Mr\u0027",
+  "name": "Click \u0027Create new address\u0027 link",
   "keyword": "And "
 });
 formatter.step({
   "line": 11,
-  "name": "Enter address \u0027Polna 23\u0027",
+  "name": "Enter alias \u0027Mr\u0027",
   "keyword": "And "
 });
 formatter.step({
   "line": 12,
-  "name": "Enter zip/postal code \u002755-100\u0027",
+  "name": "Enter address \u0027Polna 23\u0027",
   "keyword": "And "
 });
 formatter.step({
   "line": 13,
-  "name": "Enter city \u0027London\u0027",
+  "name": "Enter zip/postal code \u002755-100\u0027",
   "keyword": "And "
 });
 formatter.step({
   "line": 14,
-  "name": "Choose country \u0027United Kingdom\u0027",
+  "name": "Enter city \u0027London\u0027",
   "keyword": "And "
 });
 formatter.step({
   "line": 15,
-  "name": "Enter phone number \u0027668956224\u0027",
+  "name": "Choose country \u0027United Kingdom\u0027",
   "keyword": "And "
 });
 formatter.step({
   "line": 16,
-  "name": "Fill the form",
+  "name": "Enter phone number \u0027668956224\u0027",
   "keyword": "And "
 });
 formatter.step({
   "line": 17,
-  "name": "Click \u0027Save\u0027 button",
+  "name": "Fill the form",
   "keyword": "And "
 });
 formatter.step({
   "line": 18,
-  "name": "Click \u0027Register\u0027 button",
+  "name": "Click \u0027Save\u0027 button",
   "keyword": "And "
 });
 formatter.step({
   "line": 19,
-  "name": "Data displayed in a browser",
+  "name": "Data are displayed in a browser",
   "keyword": "Then "
 });
 formatter.match({
@@ -104,14 +104,14 @@ formatter.match({
   "location": "MyStoreLoginAddAddressPageObjSteps.openPageInBrowser(String)"
 });
 formatter.result({
-  "duration": 4184287100,
+  "duration": 3895856800,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAddAddressPageObjSteps.clickSignInLink()"
 });
 formatter.result({
-  "duration": 473756900,
+  "duration": 508302100,
   "status": "passed"
 });
 formatter.match({
@@ -119,37 +119,46 @@ formatter.match({
     {
       "val": "test@testshop.com",
       "offset": 13
-    },
-    {
-      "val": "Padqwe1$",
-      "offset": 46
     }
   ],
-  "location": "MyStoreLoginAddAddressPageObjSteps.enterEmailAndPassword(String,String)"
+  "location": "MyStoreLoginAddAddressPageObjSteps.enterEmail(String)"
 });
 formatter.result({
-  "duration": 453878401,
+  "duration": 216855900,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Padqwe1$",
+      "offset": 16
+    }
+  ],
+  "location": "MyStoreLoginAddAddressPageObjSteps.enterPassword(String)"
+});
+formatter.result({
+  "duration": 233434401,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAddAddressPageObjSteps.clickSignInButton()"
 });
 formatter.result({
-  "duration": 656809600,
+  "duration": 653936300,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAddAddressPageObjSteps.clickAddressesLink()"
 });
 formatter.result({
-  "duration": 390603700,
+  "duration": 408599101,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAddAddressPageObjSteps.clickCreateNewAddressLink()"
 });
 formatter.result({
-  "duration": 408591600,
+  "duration": 440018100,
   "status": "passed"
 });
 formatter.match({
@@ -162,7 +171,7 @@ formatter.match({
   "location": "MyStoreLoginAddAddressPageObjSteps.enterAlias(String)"
 });
 formatter.result({
-  "duration": 71101,
+  "duration": 77100,
   "status": "passed"
 });
 formatter.match({
@@ -175,7 +184,7 @@ formatter.match({
   "location": "MyStoreLoginAddAddressPageObjSteps.enterAddress(String)"
 });
 formatter.result({
-  "duration": 78600,
+  "duration": 65600,
   "status": "passed"
 });
 formatter.match({
@@ -188,7 +197,7 @@ formatter.match({
   "location": "MyStoreLoginAddAddressPageObjSteps.enterPostalCode(String)"
 });
 formatter.result({
-  "duration": 70601,
+  "duration": 66400,
   "status": "passed"
 });
 formatter.match({
@@ -201,7 +210,7 @@ formatter.match({
   "location": "MyStoreLoginAddAddressPageObjSteps.enterCity(String)"
 });
 formatter.result({
-  "duration": 93600,
+  "duration": 64800,
   "status": "passed"
 });
 formatter.match({
@@ -214,7 +223,7 @@ formatter.match({
   "location": "MyStoreLoginAddAddressPageObjSteps.chooseCountry(String)"
 });
 formatter.result({
-  "duration": 81300,
+  "duration": 69300,
   "status": "passed"
 });
 formatter.match({
@@ -227,29 +236,28 @@ formatter.match({
   "location": "MyStoreLoginAddAddressPageObjSteps.enterPhoneNumber(String)"
 });
 formatter.result({
-  "duration": 58400,
+  "duration": 79199,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAddAddressPageObjSteps.fillTheForm()"
 });
 formatter.result({
-  "duration": 1188689501,
+  "duration": 1146179900,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAddAddressPageObjSteps.clickSaveButton()"
 });
 formatter.result({
-  "duration": 474310500,
+  "duration": 573813101,
   "status": "passed"
 });
-formatter.match({});
-formatter.result({
-  "status": "undefined"
+formatter.match({
+  "location": "MyStoreLoginAddAddressPageObjSteps.dataDisplayedInBrowser()"
 });
-formatter.match({});
 formatter.result({
-  "status": "undefined"
+  "duration": 316884001,
+  "status": "passed"
 });
 });

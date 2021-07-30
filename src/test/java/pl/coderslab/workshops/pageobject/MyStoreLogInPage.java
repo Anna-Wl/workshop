@@ -19,14 +19,24 @@ public class MyStoreLogInPage {
         PageFactory.initElements(driver, this);
     }
 
-    public void enterEmailAndPassword(String email, String password) {
-        emailToLogin.clear();
-        emailToLogin.sendKeys(email);
-        passwordToLogin.clear();
-        passwordToLogin.sendKeys(password);
-    }
+//    public void enterEmailAndPassword(String email, String password) {
+//        emailToLogin.clear();
+//        emailToLogin.sendKeys(email);
+//        passwordToLogin.clear();
+//        passwordToLogin.sendKeys(password);
+//    }
 
     public void clickSignIn() {
         signInButton.click();
+    }
+
+    public void enterEmail(String email) {
+        emailToLogin.clear();
+        emailToLogin.sendKeys(email);
+    }
+
+    public void enterPassword(String password) {
+        passwordToLogin.clear();
+        passwordToLogin.sendKeys(password);
     }
 }

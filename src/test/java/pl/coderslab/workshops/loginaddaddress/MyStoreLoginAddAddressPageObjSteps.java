@@ -8,11 +8,13 @@ import cucumber.api.java.en.When;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pl.coderslab.workshops.NewAddressData;
+import pl.coderslab.workshops.UserBasicData;
 import pl.coderslab.workshops.pageobject.*;
 
 import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class MyStoreLoginAddAddressPageObjSteps {
     private WebDriver driver;
@@ -22,6 +24,8 @@ public class MyStoreLoginAddAddressPageObjSteps {
     private YourAddressesPage addressesPage;
     private NewAddressPage newAddressPage;
     private NewAddressData newAddressData;
+    private UserBasicData userBasicData;
+
 
     @Given("^Page (.*) opened in browser$")
     public void openPageInBrowser(String url) {
@@ -36,6 +40,7 @@ public class MyStoreLoginAddAddressPageObjSteps {
         this.addressesPage = new YourAddressesPage(this.driver);
         this.newAddressPage = new NewAddressPage(this.driver);
         this.newAddressData = new NewAddressData();
+        this.userBasicData = new UserBasicData();
     }
 
     @When("^Click 'Sign in' link$")
@@ -43,9 +48,13 @@ public class MyStoreLoginAddAddressPageObjSteps {
             homePage.clickSignIn();
     }
 
-    @And("^Enter email '(.*)' and password '(.*)'$")
-    public void enterEmailAndPassword(String email, String password) {
-        logInPage.enterEmailAndPassword(email, password);
+    @And("^Enter email '(.*)'$")
+    public void enterEmail(String email) {
+        logInPage.enterEmail(email);
+    }
+    @And("^Enter password '(.*)'$")
+    public void enterPassword(String password) {
+        logInPage.enterPassword(password);
     }
 
     @And("^Click 'Sing in' button$")
@@ -96,21 +105,27 @@ public class MyStoreLoginAddAddressPageObjSteps {
     @And("^Fill the form$")
     public void fillTheForm() {
         newAddressPage.fillFormWithData(this.newAddressData);
+        newAddressPage.saveFirstNameAndLastName(this.userBasicData);
+        System.out.println(userBasicData.getName() + userBasicData.getSurname());
     }
 
     @And("^Click 'Save' button$")
     public void clickSaveButton() {
         newAddressPage.clickSaveAddressButton();
+
     }
 
     @Then("^Data are displayed in a browser$")
         public void dataDisplayedInBrowser() {
-//        assertEquals(newAddressData.getAlias(), addressesPage.getLoggedInAlias());
-//        assertEquals(newAddressData.getAddress(), addressesPage.getLoggedInAddress());
-//        assertEquals(newAddressData.getZip(), addressesPage.getLoggedInZip());
-//        assertEquals(newAddressData.getCity(), addressesPage.getLoggedInCity());
-//        assertEquals(newAddressData.getCountry(), addressesPage.getLoggedInCountry());
-//        assertEquals(newAddressData.getPhoneNumber(), addressesPage.getLoggedInPhoneNumber());
+        System.out.println(addressesPage.getLoggedInResults());
+        System.out.println(addressesPage.getLoggedInAliasResult());
+        assertTrue(addressesPage.getLoggedInAliasResult().contains(newAddressData.getAlias()));
+        assertTrue(addressesPage.getLoggedInResults().contains(userBasicData.getName()));
+        assertTrue(addressesPage.getLoggedInResults().contains(userBasicData.getSurname()));
+        assertTrue(addressesPage.getLoggedInResults().contains(newAddressData.getAddress()));
+        assertTrue(addressesPage.getLoggedInResults().contains(newAddressData.getZip()));
+        assertTrue(addressesPage.getLoggedInResults().contains(newAddressData.getCity()));
+        assertTrue(addressesPage.getLoggedInResults().contains(newAddressData.getCountry()));
         }
 
 }
