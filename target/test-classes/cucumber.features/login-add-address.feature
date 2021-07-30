@@ -1,20 +1,25 @@
 Feature: Login user and add new address
 
-  Scenario: Login user and add address
+  Scenario Outline: Login user and add address
     Given Page https://prod-kurs.coderslab.pl/index.php opened in browser
     When Click 'Sign in' link
-    And Enter email 'test@testshop.com'
-    And Enter password 'Padqwe1$'
+    And Enter email '<email>'
+    And Enter password '<password>'
     And Click 'Sing in' button
     And Click 'Addresses' link
     And Click 'Create new address' link
-    And Enter alias 'Mr'
-    And Enter address 'Polna 23'
-    And Enter zip/postal code '55-100'
-    And Enter city 'London'
-    And Choose country 'United Kingdom'
-    And Enter phone number '668956224'
+    And Enter alias '<alias>'
+    And Enter address '<address>'
+    And Enter zip/postal code '<zip>'
+    And Enter city '<city>'
+    And Choose country '<country>'
+    And Enter phone number '<phone>'
     And Fill the form
     And Click 'Save' button
     Then Data are displayed in a browser
+
+    Examples:
+    |email             |password |alias|address  |city  |zip   |country       |phone    |
+    |test@testshop.com |Padqwe1$ |Mr   |Polna 23 |London|55-100|United Kingdom|668956224|
+    |test1@testsome.com|pass887££|Mrs  |Colney 3 |Leeds |E1522N|United Kingdom|788545265|
 
