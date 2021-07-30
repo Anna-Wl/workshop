@@ -11,7 +11,7 @@ public class YourAddressesPage {
     private WebElement createNewAddressLink;
     @FindBy(tagName = "address")
     private WebElement results;
-    @FindBy(xpath = "//*[@id=\"address-13209\"]/div[1]/h4")
+    @FindBy(xpath = "//*[@class=\"address-body\"]/h4")
     private WebElement aliasResult;
 
 

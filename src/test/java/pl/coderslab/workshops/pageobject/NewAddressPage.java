@@ -20,7 +20,7 @@ public class NewAddressPage {
     private WebElement cityInput;
     @FindBy(xpath = "//*[@id=\"content\"]/div/div/form/section/div[10]/div[1]/select")
     private WebElement countrySelect;
-    @FindBy(xpath = "//*[@id=\"content\"]/div/div/form/section/div[11]/div[1]/input")
+    @FindBy(xpath = "//*[@name=\"phone\"]")
     private WebElement phoneNumberInput;
     @FindBy(xpath = "//*[@id=\"content\"]/div/div/form/footer/button")
     private WebElement saveNewAddressButton;
@@ -39,9 +39,10 @@ public class NewAddressPage {
         setInput(addressInput, data.getAddress());
         setInput(cityInput, data.getCity());
         setInput(zipInput, data.getZip());
+        setInput(phoneNumberInput, data.getPhoneNumber());
         Select countrySelectData = new Select(countrySelect);
         countrySelectData.selectByVisibleText(data.getCountry());
-        setInput(phoneNumberInput, data.getPhoneNumber());
+
     }
 
     private void setInput(WebElement input, String value) {

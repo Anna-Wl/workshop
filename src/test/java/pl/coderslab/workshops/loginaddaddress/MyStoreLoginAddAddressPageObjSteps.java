@@ -13,7 +13,6 @@ import pl.coderslab.workshops.pageobject.*;
 
 import java.util.concurrent.TimeUnit;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class MyStoreLoginAddAddressPageObjSteps {
@@ -98,21 +97,21 @@ public class MyStoreLoginAddAddressPageObjSteps {
     }
 
     @And("^Enter phone number '(.*)'$")
-    public void enterPhoneNumber(String number) {
-        newAddressData.setPhoneNumber(number);
+    public void enterPhoneNumber(String phoneNumber) {
+        newAddressData.setPhoneNumber(phoneNumber);
+        System.out.println(newAddressData.getPhoneNumber());
     }
 
     @And("^Fill the form$")
     public void fillTheForm() {
-        newAddressPage.fillFormWithData(this.newAddressData);
         newAddressPage.saveFirstNameAndLastName(this.userBasicData);
         System.out.println(userBasicData.getName() + userBasicData.getSurname());
+        newAddressPage.fillFormWithData(this.newAddressData);
     }
 
     @And("^Click 'Save' button$")
     public void clickSaveButton() {
         newAddressPage.clickSaveAddressButton();
-
     }
 
     @Then("^Data are displayed in a browser$")
@@ -126,6 +125,7 @@ public class MyStoreLoginAddAddressPageObjSteps {
         assertTrue(addressesPage.getLoggedInResults().contains(newAddressData.getZip()));
         assertTrue(addressesPage.getLoggedInResults().contains(newAddressData.getCity()));
         assertTrue(addressesPage.getLoggedInResults().contains(newAddressData.getCountry()));
+        assertTrue(addressesPage.getLoggedInResults().contains(newAddressData.getPhoneNumber()));
         }
 
 }
