@@ -14,7 +14,6 @@ public class YourAddressesPage {
     @FindBy(xpath = "//*[@class='address-body']/h4")
     private WebElement aliasResult;
 
-
     public YourAddressesPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }

@@ -25,7 +25,6 @@ public class MyStoreLoginAddAddressPageObjSteps {
     private NewAddressData newAddressData;
     private UserBasicData userBasicData;
 
-
     @Given("^Page (.*) opened in browser$")
     public void openPageInBrowser(String url) {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
@@ -51,6 +50,7 @@ public class MyStoreLoginAddAddressPageObjSteps {
     public void enterEmail(String email) {
         logInPage.enterEmail(email);
     }
+
     @And("^Enter password '(.*)'$")
     public void enterPassword(String password) {
         logInPage.enterPassword(password);

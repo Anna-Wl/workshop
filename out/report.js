@@ -267,14 +267,14 @@ formatter.match({
   "location": "MyStoreLoginAddAddressPageObjSteps.openPageInBrowser(String)"
 });
 formatter.result({
-  "duration": 3950698400,
+  "duration": 3833039000,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAddAddressPageObjSteps.clickSignInLink()"
 });
 formatter.result({
-  "duration": 428530900,
+  "duration": 460200700,
   "status": "passed"
 });
 formatter.match({
@@ -287,7 +287,7 @@ formatter.match({
   "location": "MyStoreLoginAddAddressPageObjSteps.enterEmail(String)"
 });
 formatter.result({
-  "duration": 191757800,
+  "duration": 199820100,
   "status": "passed"
 });
 formatter.match({
@@ -300,28 +300,28 @@ formatter.match({
   "location": "MyStoreLoginAddAddressPageObjSteps.enterPassword(String)"
 });
 formatter.result({
-  "duration": 186165600,
+  "duration": 172945800,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAddAddressPageObjSteps.clickSignInButton()"
 });
 formatter.result({
-  "duration": 605414100,
+  "duration": 630832600,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAddAddressPageObjSteps.clickAddressesLink()"
 });
 formatter.result({
-  "duration": 350495100,
+  "duration": 448186900,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAddAddressPageObjSteps.clickCreateNewAddressLink()"
 });
 formatter.result({
-  "duration": 344665700,
+  "duration": 455186800,
   "status": "passed"
 });
 formatter.match({
@@ -334,7 +334,7 @@ formatter.match({
   "location": "MyStoreLoginAddAddressPageObjSteps.enterAlias(String)"
 });
 formatter.result({
-  "duration": 69900,
+  "duration": 65900,
   "status": "passed"
 });
 formatter.match({
@@ -347,7 +347,7 @@ formatter.match({
   "location": "MyStoreLoginAddAddressPageObjSteps.enterAddress(String)"
 });
 formatter.result({
-  "duration": 80600,
+  "duration": 70500,
   "status": "passed"
 });
 formatter.match({
@@ -360,7 +360,7 @@ formatter.match({
   "location": "MyStoreLoginAddAddressPageObjSteps.enterPostalCode(String)"
 });
 formatter.result({
-  "duration": 85600,
+  "duration": 89600,
   "status": "passed"
 });
 formatter.match({
@@ -373,7 +373,7 @@ formatter.match({
   "location": "MyStoreLoginAddAddressPageObjSteps.enterCity(String)"
 });
 formatter.result({
-  "duration": 225700,
+  "duration": 61500,
   "status": "passed"
 });
 formatter.match({
@@ -386,7 +386,7 @@ formatter.match({
   "location": "MyStoreLoginAddAddressPageObjSteps.chooseCountry(String)"
 });
 formatter.result({
-  "duration": 92600,
+  "duration": 66700,
   "status": "passed"
 });
 formatter.match({
@@ -399,28 +399,28 @@ formatter.match({
   "location": "MyStoreLoginAddAddressPageObjSteps.enterPhoneNumber(String)"
 });
 formatter.result({
-  "duration": 135900,
+  "duration": 99400,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAddAddressPageObjSteps.fillTheForm()"
 });
 formatter.result({
-  "duration": 1235836600,
+  "duration": 1222096600,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAddAddressPageObjSteps.clickSaveButton()"
 });
 formatter.result({
-  "duration": 435543100,
+  "duration": 485745300,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAddAddressPageObjSteps.dataDisplayedInBrowser()"
 });
 formatter.result({
-  "duration": 257575700,
+  "duration": 389769300,
   "status": "passed"
 });
 formatter.scenario({
@@ -545,14 +545,14 @@ formatter.match({
   "location": "MyStoreLoginAddAddressPageObjSteps.openPageInBrowser(String)"
 });
 formatter.result({
-  "duration": 2329339400,
+  "duration": 2249995400,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAddAddressPageObjSteps.clickSignInLink()"
 });
 formatter.result({
-  "duration": 422885400,
+  "duration": 384674200,
   "status": "passed"
 });
 formatter.match({
@@ -565,7 +565,7 @@ formatter.match({
   "location": "MyStoreLoginAddAddressPageObjSteps.enterEmail(String)"
 });
 formatter.result({
-  "duration": 217130600,
+  "duration": 180592300,
   "status": "passed"
 });
 formatter.match({
@@ -578,28 +578,28 @@ formatter.match({
   "location": "MyStoreLoginAddAddressPageObjSteps.enterPassword(String)"
 });
 formatter.result({
-  "duration": 189794000,
+  "duration": 176756300,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAddAddressPageObjSteps.clickSignInButton()"
 });
 formatter.result({
-  "duration": 616280200,
+  "duration": 599461700,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAddAddressPageObjSteps.clickAddressesLink()"
 });
 formatter.result({
-  "duration": 339019500,
+  "duration": 344756100,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAddAddressPageObjSteps.clickCreateNewAddressLink()"
 });
 formatter.result({
-  "duration": 340623500,
+  "duration": 331784600,
   "status": "passed"
 });
 formatter.match({
@@ -612,7 +612,7 @@ formatter.match({
   "location": "MyStoreLoginAddAddressPageObjSteps.enterAlias(String)"
 });
 formatter.result({
-  "duration": 65100,
+  "duration": 55600,
   "status": "passed"
 });
 formatter.match({
@@ -625,7 +625,7 @@ formatter.match({
   "location": "MyStoreLoginAddAddressPageObjSteps.enterAddress(String)"
 });
 formatter.result({
-  "duration": 77200,
+  "duration": 132500,
   "status": "passed"
 });
 formatter.match({
@@ -638,7 +638,7 @@ formatter.match({
   "location": "MyStoreLoginAddAddressPageObjSteps.enterPostalCode(String)"
 });
 formatter.result({
-  "duration": 47400,
+  "duration": 49300,
   "status": "passed"
 });
 formatter.match({
@@ -651,7 +651,7 @@ formatter.match({
   "location": "MyStoreLoginAddAddressPageObjSteps.enterCity(String)"
 });
 formatter.result({
-  "duration": 47700,
+  "duration": 42600,
   "status": "passed"
 });
 formatter.match({
@@ -664,7 +664,7 @@ formatter.match({
   "location": "MyStoreLoginAddAddressPageObjSteps.chooseCountry(String)"
 });
 formatter.result({
-  "duration": 207800,
+  "duration": 70800,
   "status": "passed"
 });
 formatter.match({
@@ -677,28 +677,28 @@ formatter.match({
   "location": "MyStoreLoginAddAddressPageObjSteps.enterPhoneNumber(String)"
 });
 formatter.result({
-  "duration": 79600,
+  "duration": 76400,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAddAddressPageObjSteps.fillTheForm()"
 });
 formatter.result({
-  "duration": 1218408700,
+  "duration": 1103493300,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAddAddressPageObjSteps.clickSaveButton()"
 });
 formatter.result({
-  "duration": 434465100,
+  "duration": 409686300,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAddAddressPageObjSteps.dataDisplayedInBrowser()"
 });
 formatter.result({
-  "duration": 246738400,
+  "duration": 263847400,
   "status": "passed"
 });
 });

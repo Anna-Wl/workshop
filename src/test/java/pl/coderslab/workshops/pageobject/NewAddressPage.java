@@ -29,7 +29,6 @@ public class NewAddressPage {
     @FindBy(xpath = "//*[@name='lastname']")
     private WebElement lastNameInput;
 
-
     public NewAddressPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
@@ -42,7 +41,6 @@ public class NewAddressPage {
         setInput(phoneNumberInput, data.getPhoneNumber());
         Select countrySelectData = new Select(countrySelect);
         countrySelectData.selectByVisibleText(data.getCountry());
-
     }
 
     private void setInput(WebElement input, String value) {
