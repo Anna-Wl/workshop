@@ -115,7 +115,7 @@ public class MyStoreLoginAddAddressPageObjSteps {
         newAddressPage.clickSaveAddressButton();
     }
 
-    @And("^Check data are displayed in a browser$")
+    @And("^Data are displayed in a browser$")
         public void dataDisplayedInBrowser() {
         System.out.println(addressesPage.getLoggedInResults());
         System.out.println(addressesPage.getLoggedInAliasResult());
