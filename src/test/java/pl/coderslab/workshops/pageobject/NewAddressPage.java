@@ -36,8 +36,8 @@ public class NewAddressPage {
     public void fillFormWithData(NewAddressData data) {
         setInput(aliasInput, data.getAlias());
         setInput(addressInput, data.getAddress());
-        setInput(cityInput, data.getCity());
         setInput(zipInput, data.getZip());
+        setInput(cityInput, data.getCity());
         setInput(phoneNumberInput, data.getPhoneNumber());
         Select countrySelectData = new Select(countrySelect);
         countrySelectData.selectByVisibleText(data.getCountry());
