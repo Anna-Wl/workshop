@@ -11,7 +11,6 @@ public class YourAccountPage {
     @FindBy(xpath = "//*[@title='Addresses']")
     private WebElement addressesLink;
 
-
     public YourAccountPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);

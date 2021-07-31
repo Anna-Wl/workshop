@@ -13,7 +13,10 @@ public class YourAddressesPage {
     private WebElement results;
     @FindBy(xpath = "//*[@class='address-body']/h4")
     private WebElement aliasResult;
-
+    @FindBy(xpath = "//*[@data-link-action=\"delete-address\"]")
+    private WebElement deleteLink;
+    @FindBy(xpath = "//*[@data-alert=\"success\"]/ul/li")
+    private WebElement alertMessageDeleted;
 
     public YourAddressesPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -29,5 +32,13 @@ public class YourAddressesPage {
 
     public String getLoggedInAliasResult() {
         return aliasResult.getText();
+    }
+
+    public void clickDeleteUserLink() {
+        deleteLink.click();
+    }
+
+    public String getSuccessMessageText() {
+        return alertMessageDeleted.getText();
     }
 }

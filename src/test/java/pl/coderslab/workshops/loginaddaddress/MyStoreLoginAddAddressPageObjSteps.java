@@ -13,6 +13,7 @@ import pl.coderslab.workshops.pageobject.*;
 
 import java.util.concurrent.TimeUnit;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class MyStoreLoginAddAddressPageObjSteps {
@@ -24,7 +25,6 @@ public class MyStoreLoginAddAddressPageObjSteps {
     private NewAddressPage newAddressPage;
     private NewAddressData newAddressData;
     private UserBasicData userBasicData;
-
 
     @Given("^Page (.*) opened in browser$")
     public void openPageInBrowser(String url) {
@@ -114,7 +114,7 @@ public class MyStoreLoginAddAddressPageObjSteps {
         newAddressPage.clickSaveAddressButton();
     }
 
-    @Then("^Data are displayed in a browser$")
+    @And("^Check data are displayed in a browser$")
         public void dataDisplayedInBrowser() {
         System.out.println(addressesPage.getLoggedInResults());
         System.out.println(addressesPage.getLoggedInAliasResult());
@@ -126,7 +126,18 @@ public class MyStoreLoginAddAddressPageObjSteps {
         assertTrue(addressesPage.getLoggedInResults().contains(newAddressData.getCity()));
         assertTrue(addressesPage.getLoggedInResults().contains(newAddressData.getCountry()));
         assertTrue(addressesPage.getLoggedInResults().contains(newAddressData.getPhoneNumber()));
+        assertEquals("Address successfully added!", addressesPage.getSuccessMessageText());
         }
+
+    @And("^Click 'Delete' link$")
+    public void clickDeleteLink() {
+        addressesPage.clickDeleteUserLink();
+    }
+
+    @Then("^Message 'Address successfully deleted!' displayed on the page$")
+    public void addressDeletedMessageDisplayed() {
+        assertEquals("Address successfully deleted!", addressesPage.getSuccessMessageText());
+    }
 
 }
 
