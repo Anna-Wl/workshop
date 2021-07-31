@@ -16,13 +16,14 @@ Feature: Login user and add new address
     And Enter phone number '<phone>'
     And Fill the form
     And Click 'Save' button
-    And Check data are displayed in a browser
+    And Data are displayed in a browser
     And Click 'Delete' link
     Then Message 'Address successfully deleted!' displayed on the page
 
     Examples:
     |email             |password |alias|address  |city  |zip   |country       |phone    |
     |test@testshop.com |Padqwe1$ |Mr   |Polna 23 |London|55-100|United Kingdom|668956224|
+    |test1@testsome.com|pass887££|Mrs  |Colney 3 |Leeds |E1522N|United Kingdom|788545265|
 
 
 
