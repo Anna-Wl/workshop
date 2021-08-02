@@ -28,6 +28,6 @@ Feature: Login user and add new address
 
     Examples:
       |email            |password  |product                    |discount|price |size|itemsNumber|shipping  |payment         |
-      |test@testshop.com|Padqwe1$  |Hummingbird Printed Sweater|-20%    |€28.72|XL   |3          |My carrier|Pay by bank wire|
-
+      |test@testshop.com|Padqwe1$  |Hummingbird Printed Sweater|-20%    |€28.72|XL  |3          |PrestaShop|Pay by Check    |
+      |test1@testsome.com|pass887££|Hummingbird Printed Sweater|-20%    |€28.72|M   |2          |My carrier|Pay by bank wire|
 
