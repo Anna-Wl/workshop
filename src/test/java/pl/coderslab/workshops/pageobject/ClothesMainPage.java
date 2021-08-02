@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ClothesMainPage {
-    @FindBy(xpath = "//*[@id=\"js-product-list\"]/div[1]/article[2]/div/div[1]/h2/a")
+    @FindBy(xpath = "//*[@id='js-product-list']/div[1]/article[2]/div/div[1]/h2/a")
     private WebElement productName;
     private WebDriver driver;
     private String productPrice;
@@ -39,13 +39,13 @@ public class ClothesMainPage {
     public String chooseProduct(String productName) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,350)", "");
-        List<WebElement> productTitleList = driver.findElements(By.xpath("//*[@class=\"h3 product-title\"]/a"));
+        List<WebElement> productTitleList = driver.findElements(By.xpath("//*[@class='h3 product-title']/a"));
         ArrayList<String> newList = new ArrayList<String>();
         ArrayList<String> allProductList = new ArrayList<String>();
 
-        List<WebElement> priceList = driver.findElements(By.xpath("//*[@class=\"price\"]"));
+        List<WebElement> priceList = driver.findElements(By.xpath("//*[@class='price']"));
         //someText = productTitleList1.get(0).getText();
-        List<WebElement> discountList = driver.findElements(By.xpath("//*[@class=\"discount-percentage discount-product\"]"));
+        List<WebElement> discountList = driver.findElements(By.xpath("//*[@class='discount-percentage discount-product']"));
 
         for(int i = 0; i < productTitleList.size(); i++) {
             String singleProductName = productTitleList.get(i).getText();
@@ -63,25 +63,6 @@ public class ClothesMainPage {
         //System.out.println(resultProduct);
         return resultProduct;
     }
-
-    public void isDiscount20Percent(String productName) {
-//        JavascriptExecutor js = (JavascriptExecutor) driver;
-//        js.executeScript("window.scrollBy(0,350)", "");
-//        List<WebElement> discountList = driver.findElements(By.xpath("//*[@class=\"discount-percentage discount-product\"]"));
-//        ArrayList<String> newList = new ArrayList<String>();
-//        for(int i = 0; i < discountList.size(); i++) {
-//            String singleProductDicount = discountList.get(i).getText();
-//            if(discountList.equals(productName)) {
-//                productTitleList.get(i).click();
-//                newList.add(singleProductName);
-//            }
-//        }
-//        //System.out.println(newList);
-//        String resultProduct = newList.get(0);
-//        //System.out.println(resultProduct);
-//        return resultProduct;
-    }
-
 
     public void saveProductName(String productName) {
         productNameChoosen = productName;

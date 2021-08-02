@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class ModalPage {
-    @FindBy(xpath="//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/a")
+    @FindBy(xpath="//*[@id='blockcart-modal']/div/div/div[2]/div/div[2]/div/div/a")
     private WebElement proceedToCheckoutButton;
 
     public ModalPage(WebDriver driver) {

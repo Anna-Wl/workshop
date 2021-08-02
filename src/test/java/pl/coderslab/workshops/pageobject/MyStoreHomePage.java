@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 public class MyStoreHomePage {
     @FindBy(xpath = "//*[@id='_desktop_user_info']/div/a")
     private WebElement signInLink;
-    @FindBy(xpath = "//*[@id=\"_desktop_user_info\"]/div/a[2]")
+    @FindBy(xpath = "//*[@id='_desktop_user_info']/div/a[2]")
     private WebElement userNameLink;
 
     public MyStoreHomePage(WebDriver driver) {

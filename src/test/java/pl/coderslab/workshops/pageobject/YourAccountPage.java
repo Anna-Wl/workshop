@@ -10,7 +10,7 @@ public class YourAccountPage {
     private WebDriver driver;
     @FindBy(xpath = "//*[@title='Addresses']")
     private WebElement addressesLink;
-    @FindBy(xpath = "//*[@id=\"category-3\"]/a")
+    @FindBy(xpath = "//*[@id='category-3']/a")
     private WebElement clothesLink;
     @FindBy(id="history-link")
     private WebElement orderHistoryAndDetailsLink;

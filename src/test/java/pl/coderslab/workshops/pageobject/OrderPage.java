@@ -16,13 +16,13 @@ import java.time.LocalDateTime;
 
 public class OrderPage {
 
-    @FindBy(xpath="//*[@name=\"confirm-addresses\"]")
+    @FindBy(xpath="//*[@name='confirm-addresses']")
     private WebElement addressContinueButton;
-    @FindBy(xpath = "//*[@name=\"confirmDeliveryOption\"]")
+    @FindBy(xpath = "//*[@name='confirmDeliveryOption']")
     private WebElement shippingMethodContinueButton;
-    @FindBy(xpath = "//*[@id=\"delivery_option_1\"]")
+    @FindBy(xpath = "//*[@id='delivery_option_1']")
     private WebElement shippingMethodDeliveryOptionPrestaShop;
-    @FindBy(xpath = "//*[@id=\"delivery_option_2\"]")
+    @FindBy(xpath = "//*[@id='delivery_option_2']")
     private WebElement shippingMethodDeliveryOptionMyCarrier;
     @FindBy(id = "payment-option-1")
     private WebElement paymentMethodPayByCheck;

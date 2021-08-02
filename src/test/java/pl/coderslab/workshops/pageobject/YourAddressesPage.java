@@ -13,9 +13,9 @@ public class YourAddressesPage {
     private WebElement results;
     @FindBy(xpath = "//*[@class='address-body']/h4")
     private WebElement aliasResult;
-    @FindBy(xpath = "//*[@data-link-action=\"delete-address\"]")
+    @FindBy(xpath = "//*[@data-link-action='delete-address']")
     private WebElement deleteLink;
-    @FindBy(xpath = "//*[@data-alert=\"success\"]/ul/li")
+    @FindBy(xpath = "//*[@data-alert='success']/ul/li")
     private WebElement alertMessageDeleted;
 
     public YourAddressesPage(WebDriver driver) {

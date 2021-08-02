@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class CartPage {
-    @FindBy(xpath = "//*[@id=\"main\"]/div/div[2]/div[1]/div[2]/div/a")
+    @FindBy(xpath = "//*[@id='main']/div/div[2]/div[1]/div[2]/div/a")
     private WebElement proceedToCheckoutOnCartPage;
 
     public CartPage(WebDriver driver) {

@@ -15,18 +15,18 @@ import java.time.LocalDateTime;
 
 public class YourOrderIsConfirmedPage {
     private WebDriver driver;
-    @FindBy(xpath = "//*[@id=\"order-details\"]/ul/li[1]")
+    @FindBy(xpath = "//*[@id='order-details']/ul/li[1]")
     private WebElement orderReference;
     private String orderReferenceNumber;
     private String totalPriceReferenceNumber;
-    @FindBy(xpath = "//*[@id=\"order-items\"]/div/table/tbody/tr[3]/td[2]")
+    @FindBy(xpath = "//*[@id='order-items']/div/table/tbody/tr[3]/td[2]")
     private WebElement totalPriceReference;
-    @FindBy(xpath = "//*[@id=\"order-details\"]/ul/li[3]")
+    @FindBy(xpath = "//*[@id='order-details']/ul/li[3]")
     private WebElement shippingMethodDisplayed;
     String[] splitShippingMethodDisplayedText;
-    @FindBy(xpath = "//*[@id=\"order-items\"]/div/div/div[2]/span")
+    @FindBy(xpath = "//*[@id='order-items']/div/div/div[2]/span")
     private WebElement productnameDisplayed;
-    @FindBy(xpath = "//*[@id=\"order-items\"]/div/div/div[3]/div/div[2]")
+    @FindBy(xpath = "//*[@id='order-items']/div/div/div[3]/div/div[2]")
     private WebElement quantityDisplayed;
 
     public YourOrderIsConfirmedPage(WebDriver driver) {
@@ -52,11 +52,11 @@ public class YourOrderIsConfirmedPage {
 
     public void takeScreenshoot() throws IOException {
         TakesScreenshot screenshot = (TakesScreenshot)driver;
-//Take screenshot (will be saved in default location) and automatically removed after test
+        //Take screenshot (will be saved in default location) and automatically removed after test
         File source = screenshot.getScreenshotAs(OutputType.FILE);
-//Copy the screenshot to desired location
-//Path to the location to save screenshot
-//(directory for screenshots MUST exist: C:\test-evidence) e.g.:
+        //Copy the screenshot to desired location
+        //Path to the location to save screenshot
+        //(directory for screenshots MUST exist: C:\test-evidence) e.g.:
         String currentDateTime = LocalDateTime.now().toString().replaceAll(":", "_");
         Files.copy(source.toPath(), Paths.get("C:", "test-evidence", "ddg-evidence-"+currentDateTime+".png"));
     }
@@ -69,30 +69,18 @@ public class YourOrderIsConfirmedPage {
     }
 
     public void savePriceReference() {
-//        String totalPriceReferenceText = totalPriceReference.getText();
-//        String[] splitTotalPriceReferenceText = totalPriceReferenceText.split("€");
-//        int lastIndex = splitTotalPriceReferenceText.length-1;
-//        totalPriceReferenceNumber = splitTotalPriceReferenceText[lastIndex];
         totalPriceReferenceNumber = totalPriceReference.getText();
     }
 
-
     public String getShippingMethodDisplayed() {
-//        String shippingMethodDisplayedText = shippingMethodDisplayed.getText();
-//        splitShippingMethodDisplayedText = shippingMethodDisplayedText.split(" ");
-//        //int lastIndex = splitShippingMethodDisplayedText.length-1;
-//        String shippingMethodChoosen = splitShippingMethodDisplayedText[2];
-        String shippingMethodDisplayedText = shippingMethodDisplayed.getText();
-        return shippingMethodDisplayedText;
+        return shippingMethodDisplayed.getText();
     }
 
     public String getProductNameDisplayed() {
-        String productNameDisplayedText = productnameDisplayed.getText();
-        return productNameDisplayedText;
+        return productnameDisplayed.getText();
     }
 
     public String getQtyDisplayed() {
-        String quantityDisplayedText = quantityDisplayed.getText();
-        return quantityDisplayedText;
+        return quantityDisplayed.getText();
     }
 }

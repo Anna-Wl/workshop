@@ -12,9 +12,9 @@ import org.openqa.selenium.support.ui.Select;
 public class ProductPage {
     @FindBy(id="group_1")
     private WebElement sizeDropdown;
-    @FindBy(xpath = "//*[@class=\"btn btn-touchspin js-touchspin bootstrap-touchspin-up\"]")
+    @FindBy(xpath = "//*[@class='btn btn-touchspin js-touchspin bootstrap-touchspin-up']")
     private WebElement qtyUpButton;
-    @FindBy(xpath = "//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button")
+    @FindBy(xpath = "//*[@id='add-to-cart-or-refresh']/div[2]/div/div[2]/button")
     private WebElement addToCartButton;
     private String sizeChoosen;
     private int qtyChoosen;
@@ -57,14 +57,11 @@ public class ProductPage {
         addToCartButton.click();
     }
 
-
     public void saveProductSize(String size) {
         sizeChoosen = size;
     }
 
-
     public void saveQuantity(int numOfItems) {
         qtyChoosen = numOfItems;
-
     }
 }
