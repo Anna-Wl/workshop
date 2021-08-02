@@ -115,8 +115,10 @@ public class MyStoreLoginAndOrderPageObjSteps {
     }
 
     @And("^Choose '(.*)' items$")
-    public void chooseNumOfItems(int numOfItems) {
+    public void chooseNumOfItems(int numOfItems) throws InterruptedException {
+        Thread.sleep(2000);
         productPage.chooseItemsNumber(numOfItems);
+        productPage.saveQuantity(numOfItems);
     }
 
     @And("^Add product to basket$")
@@ -179,6 +181,9 @@ public class MyStoreLoginAndOrderPageObjSteps {
         System.out.println(yourOrderIsConfirmedPage.getProductNameDisplayed());
         assertTrue(yourOrderIsConfirmedPage.getProductNameDisplayed().toLowerCase().contains(clothesMainPage.getProductNameChoosen().toLowerCase()));
         assertTrue(yourOrderIsConfirmedPage.getProductNameDisplayed().contains(productPage.getSizeChoosen()));
+        assertTrue(yourOrderIsConfirmedPage.getQtyDisplayed().contains(String.valueOf(productPage.getQtyChoosen())));
+        System.out.println(yourOrderIsConfirmedPage.getQtyDisplayed());
+        System.out.println(productPage.getQtyChoosen());
     }
 
     @And("^Click user name$")
@@ -206,8 +211,6 @@ public class MyStoreLoginAndOrderPageObjSteps {
             assertEquals("Awaiting bank wire payment", orderHistoryPage.getOrderResult());
         }
         assertEquals(yourOrderIsConfirmedPage.getTotalPriceReferenceNumber(), orderHistoryPage.getPriceResult());
-
-
 
     }
 }

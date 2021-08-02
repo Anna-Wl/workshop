@@ -17,6 +17,7 @@ public class ProductPage {
     @FindBy(xpath = "//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button")
     private WebElement addToCartButton;
     private String sizeChoosen;
+    private int qtyChoosen;
 
     public String getSizeChoosen() {
         return sizeChoosen;
@@ -24,6 +25,10 @@ public class ProductPage {
 
     public void setSizeChoosen(String sizeChoosen) {
         this.sizeChoosen = sizeChoosen;
+    }
+
+    public int getQtyChoosen() {
+        return qtyChoosen;
     }
 
     public ProductPage(WebDriver driver) {
@@ -43,7 +48,7 @@ public class ProductPage {
     }
 
     public void chooseItemsNumber(int numOfItems) {
-        for(int i = 0; i < numOfItems; i++) {
+        for(int i = 0; i < numOfItems-1; i++) {
             qtyUpButton.click();
         }
     }
@@ -58,4 +63,8 @@ public class ProductPage {
     }
 
 
+    public void saveQuantity(int numOfItems) {
+        qtyChoosen = numOfItems;
+
+    }
 }

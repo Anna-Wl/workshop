@@ -26,6 +26,8 @@ public class YourOrderIsConfirmedPage {
     String[] splitShippingMethodDisplayedText;
     @FindBy(xpath = "//*[@id=\"order-items\"]/div/div/div[2]/span")
     private WebElement productnameDisplayed;
+    @FindBy(xpath = "//*[@id=\"order-items\"]/div/div/div[3]/div/div[2]")
+    private WebElement quantityDisplayed;
 
     public YourOrderIsConfirmedPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -87,5 +89,10 @@ public class YourOrderIsConfirmedPage {
     public String getProductNameDisplayed() {
         String productNameDisplayedText = productnameDisplayed.getText();
         return productNameDisplayedText;
+    }
+
+    public String getQtyDisplayed() {
+        String quantityDisplayedText = quantityDisplayed.getText();
+        return quantityDisplayedText;
     }
 }
