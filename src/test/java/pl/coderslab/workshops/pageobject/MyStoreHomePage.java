@@ -8,6 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 public class MyStoreHomePage {
     @FindBy(xpath = "//*[@id='_desktop_user_info']/div/a")
     private WebElement signInLink;
+    @FindBy(xpath = "//*[@id=\"_desktop_user_info\"]/div/a[2]")
+    private WebElement userNameLink;
 
     public MyStoreHomePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -15,5 +17,9 @@ public class MyStoreHomePage {
 
     public void clickSignIn() {
         signInLink.click();
+    }
+
+    public void clickUserNameLink() {
+        userNameLink.click();
     }
 }
