@@ -17,10 +17,10 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.LocalDateTime;
+import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class MyStoreLoginAndOrderPageObjSteps {
     private WebDriver driver;
@@ -84,6 +84,7 @@ public class MyStoreLoginAndOrderPageObjSteps {
         String resultProduct = clothesMainPage.chooseProduct(productName);
         System.out.println(resultProduct);
         assertEquals(productName, resultProduct);
+        clothesMainPage.saveProductName(productName);
     }
 
     @And("^Discount for product is '(.*)'$")
@@ -99,8 +100,18 @@ public class MyStoreLoginAndOrderPageObjSteps {
     }
 
     @And("^Choose size '(.*)'$")
-    public void chooseSize(String size) {
+    public void chooseSize(String size) throws InterruptedException {
         productPage.chooseProductSize(size);
+        Thread.sleep(2000);
+        productPage.saveProductSize(size);
+        System.out.println(productPage.isSizeAvailable());
+        if(!productPage.isSizeAvailable()) {
+            productPage.chooseProductSize("M");
+            assertFalse(size + " size is not available", productPage.isSizeAvailable());
+        } else {
+            assertTrue(size + " size is available", productPage.isSizeAvailable());
+        }
+
     }
 
     @And("^Choose '(.*)' items$")
@@ -159,7 +170,15 @@ public class MyStoreLoginAndOrderPageObjSteps {
         yourOrderIsConfirmedPage.takeScreenshoot();
         yourOrderIsConfirmedPage.saveOrderReference();
         yourOrderIsConfirmedPage.savePriceReference();
-        System.out.println(yourOrderIsConfirmedPage.getOrderReferenceNumber() + yourOrderIsConfirmedPage.getTotalPriceReferenceNumber());
+        assertTrue(yourOrderIsConfirmedPage.getShippingMethodDisplayed().contains(orderPage.getShippingMethodChoosen()));
+        if(orderPage.getShippingMethodChoosen().equals("PrestaShop")) {
+            assertTrue(yourOrderIsConfirmedPage.getShippingMethodDisplayed().contains("PrestaShop"));
+        } else {
+            System.out.println("My carrier has been choosen");
+        }
+        System.out.println(yourOrderIsConfirmedPage.getProductNameDisplayed());
+        assertTrue(yourOrderIsConfirmedPage.getProductNameDisplayed().toLowerCase().contains(clothesMainPage.getProductNameChoosen().toLowerCase()));
+        assertTrue(yourOrderIsConfirmedPage.getProductNameDisplayed().contains(productPage.getSizeChoosen()));
     }
 
     @And("^Click user name$")
@@ -180,8 +199,14 @@ public class MyStoreLoginAndOrderPageObjSteps {
         System.out.println(yourOrderIsConfirmedPage.getTotalPriceReferenceNumber());
         System.out.println(orderHistoryPage.getOrderResult());
         System.out.println(orderHistoryPage.getPriceResult());
-         assertEquals("Awaiting check payment", orderHistoryPage.getOrderResult());
+        System.out.println(orderPage.getPaymentMethodChoosen());
+        if(orderPage.getPaymentMethodChoosen().equals("Pay By Check")) {
+            assertEquals("Awaiting check payment", orderHistoryPage.getOrderResult());
+        } else {
+            assertEquals("Awaiting bank wire payment", orderHistoryPage.getOrderResult());
+        }
         assertEquals(yourOrderIsConfirmedPage.getTotalPriceReferenceNumber(), orderHistoryPage.getPriceResult());
+
 
 
     }

@@ -46,27 +46,27 @@ formatter.step({
 });
 formatter.step({
   "line": 10,
-  "name": "Click product \u0027Hummingbird Printed Sweater\u0027",
+  "name": "Click product \u0027\u003cproduct\u003e\u0027",
   "keyword": "And "
 });
 formatter.step({
   "line": 11,
-  "name": "Discount for product is \u0027-20%\u0027",
+  "name": "Discount for product is \u0027\u003cdiscount\u003e\u0027",
   "keyword": "And "
 });
 formatter.step({
   "line": 12,
-  "name": "Price of product is \u0027€28.72\u0027",
+  "name": "Price of product is \u0027\u003cprice\u003e\u0027",
   "keyword": "And "
 });
 formatter.step({
   "line": 13,
-  "name": "Choose size \u0027M\u0027",
+  "name": "Choose size \u0027\u003csize\u003e\u0027",
   "keyword": "And "
 });
 formatter.step({
   "line": 14,
-  "name": "Choose \u00275\u0027 items",
+  "name": "Choose \u0027\u003citemsNumber\u003e\u0027 items",
   "keyword": "And "
 });
 formatter.step({
@@ -91,7 +91,7 @@ formatter.step({
 });
 formatter.step({
   "line": 19,
-  "name": "Choose shipping method \u0027PrestaShop\u0027",
+  "name": "Choose shipping method \u0027\u003cshipping\u003e\u0027",
   "keyword": "And "
 });
 formatter.step({
@@ -101,7 +101,7 @@ formatter.step({
 });
 formatter.step({
   "line": 21,
-  "name": "Choose payment method \u0027Pay By Check\u0027",
+  "name": "Choose payment method \u0027\u003cpayment\u003e\u0027",
   "keyword": "And "
 });
 formatter.step({
@@ -144,12 +144,13 @@ formatter.examples({
       "cells": [
         "email",
         "password",
-        "alias",
-        "address",
-        "city",
-        "zip",
-        "country",
-        "phone"
+        "product",
+        "discount",
+        "price",
+        "size",
+        "itemsNumber",
+        "shipping",
+        "payment"
       ],
       "line": 30,
       "id": "login-user-and-add-new-address;login-user-and-add-address;;1"
@@ -158,12 +159,13 @@ formatter.examples({
       "cells": [
         "test@testshop.com",
         "Padqwe1$",
-        "Mr",
-        "Polna 23",
-        "London",
-        "55-100",
-        "United Kingdom",
-        "668956224"
+        "Hummingbird Printed Sweater",
+        "-20%",
+        "€28.72",
+        "S",
+        "5",
+        "My carrier",
+        "Pay by bank wire"
       ],
       "line": 31,
       "id": "login-user-and-add-new-address;login-user-and-add-address;;2"
@@ -218,26 +220,41 @@ formatter.step({
 formatter.step({
   "line": 10,
   "name": "Click product \u0027Hummingbird Printed Sweater\u0027",
+  "matchedColumns": [
+    2
+  ],
   "keyword": "And "
 });
 formatter.step({
   "line": 11,
   "name": "Discount for product is \u0027-20%\u0027",
+  "matchedColumns": [
+    3
+  ],
   "keyword": "And "
 });
 formatter.step({
   "line": 12,
   "name": "Price of product is \u0027€28.72\u0027",
+  "matchedColumns": [
+    4
+  ],
   "keyword": "And "
 });
 formatter.step({
   "line": 13,
-  "name": "Choose size \u0027M\u0027",
+  "name": "Choose size \u0027S\u0027",
+  "matchedColumns": [
+    5
+  ],
   "keyword": "And "
 });
 formatter.step({
   "line": 14,
   "name": "Choose \u00275\u0027 items",
+  "matchedColumns": [
+    6
+  ],
   "keyword": "And "
 });
 formatter.step({
@@ -262,7 +279,10 @@ formatter.step({
 });
 formatter.step({
   "line": 19,
-  "name": "Choose shipping method \u0027PrestaShop\u0027",
+  "name": "Choose shipping method \u0027My carrier\u0027",
+  "matchedColumns": [
+    7
+  ],
   "keyword": "And "
 });
 formatter.step({
@@ -272,7 +292,10 @@ formatter.step({
 });
 formatter.step({
   "line": 21,
-  "name": "Choose payment method \u0027Pay By Check\u0027",
+  "name": "Choose payment method \u0027Pay by bank wire\u0027",
+  "matchedColumns": [
+    8
+  ],
   "keyword": "And "
 });
 formatter.step({
@@ -315,14 +338,14 @@ formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.openPageInBrowser(String)"
 });
 formatter.result({
-  "duration": 4496762400,
+  "duration": 11141846200,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.clickSignInLink()"
 });
 formatter.result({
-  "duration": 401194000,
+  "duration": 445382700,
   "status": "passed"
 });
 formatter.match({
@@ -335,7 +358,7 @@ formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.enterEmail(String)"
 });
 formatter.result({
-  "duration": 190313000,
+  "duration": 190016000,
   "status": "passed"
 });
 formatter.match({
@@ -348,21 +371,21 @@ formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.enterPassword(String)"
 });
 formatter.result({
-  "duration": 175526200,
+  "duration": 202899200,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.clickSignInButton()"
 });
 formatter.result({
-  "duration": 628550600,
+  "duration": 705255400,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.clickClothesLink()"
 });
 formatter.result({
-  "duration": 411467400,
+  "duration": 424647400,
   "status": "passed"
 });
 formatter.match({
@@ -375,7 +398,7 @@ formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.chooseProduct(String)"
 });
 formatter.result({
-  "duration": 588115700,
+  "duration": 1183000400,
   "status": "passed"
 });
 formatter.match({
@@ -388,7 +411,7 @@ formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.isProductDiscontedWith20Percent(String)"
 });
 formatter.result({
-  "duration": 90500,
+  "duration": 134100,
   "status": "passed"
 });
 formatter.match({
@@ -401,20 +424,20 @@ formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.isProductPrice(String)"
 });
 formatter.result({
-  "duration": 94400,
+  "duration": 93400,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "M",
+      "val": "S",
       "offset": 13
     }
   ],
   "location": "MyStoreLoginAndOrderPageObjSteps.chooseSize(String)"
 });
 formatter.result({
-  "duration": 180403200,
+  "duration": 2352426700,
   "status": "passed"
 });
 formatter.match({
@@ -427,110 +450,110 @@ formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.chooseNumOfItems(int)"
 });
 formatter.result({
-  "duration": 300414500,
+  "duration": 328875400,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.addProductToBasket()"
 });
 formatter.result({
-  "duration": 2098852500,
+  "duration": 2087313000,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.clickProceedToCheckout()"
 });
 formatter.result({
-  "duration": 410109000,
+  "duration": 452329700,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.clickProceedToCheckoutonCartPage()"
 });
 formatter.result({
-  "duration": 405763800,
+  "duration": 449780100,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.clickContinueToConfirmAddress()"
 });
 formatter.result({
-  "duration": 566918700,
+  "duration": 624958200,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "PrestaShop",
+      "val": "My carrier",
       "offset": 24
     }
   ],
   "location": "MyStoreLoginAndOrderPageObjSteps.chooseShippingMethod(String)"
 });
 formatter.result({
-  "duration": 40568900,
+  "duration": 141672800,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.clickContinueButtonToConfirmShippingMethod()"
 });
 formatter.result({
-  "duration": 585317200,
+  "duration": 663585000,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "Pay By Check",
+      "val": "Pay by bank wire",
       "offset": 23
     }
   ],
   "location": "MyStoreLoginAndOrderPageObjSteps.choosePaymentMethod(String)"
 });
 formatter.result({
-  "duration": 121636800,
+  "duration": 133739300,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.clickAgreeToTheTermsOfService()"
 });
 formatter.result({
-  "duration": 110003200,
+  "duration": 102378900,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.clickorderWithAnObligationToPayButton()"
 });
 formatter.result({
-  "duration": 683835400,
+  "duration": 1042747500,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.takeScreenshotOfOrderConfirmationAndPrice()"
 });
 formatter.result({
-  "duration": 245672500,
+  "duration": 390002600,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.clickUsernName()"
 });
 formatter.result({
-  "duration": 357185300,
+  "duration": 356410500,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.clickOrderHistoryAndDetails()"
 });
 formatter.result({
-  "duration": 2436850300,
+  "duration": 2602328700,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.orderStatusAwaitingCheckPaymentAndCorrectTotals()"
 });
 formatter.result({
-  "duration": 870196200,
+  "duration": 1866901300,
   "status": "passed"
 });
 });

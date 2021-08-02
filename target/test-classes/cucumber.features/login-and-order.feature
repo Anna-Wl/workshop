@@ -7,18 +7,18 @@ Feature: Login user and add new address
     And Enter password '<password>'
     And Click 'Sing in' button
     And Click 'Clothes' link
-    And Click product 'Hummingbird Printed Sweater'
-    And Discount for product is '-20%'
-    And Price of product is '€28.72'
-    And Choose size 'M'
-    And Choose '5' items
+    And Click product '<product>'
+    And Discount for product is '<discount>'
+    And Price of product is '<price>'
+    And Choose size '<size>'
+    And Choose '<itemsNumber>' items
     And Add product to basket
     And Click 'Proceed to checkout' on Modal Page
     And Click 'Proceed to checkout' on Cart Page
     And Click 'Continue' button to confirm address
-    And Choose shipping method 'PrestaShop'
+    And Choose shipping method '<shipping>'
     And Click 'Continue' button to confirm shipping method
-    And Choose payment method 'Pay By Check'
+    And Choose payment method '<payment>'
     And Click 'agree to the terms of service'
     And Click 'Order with and obligation to pay button'
     And Take screenshot of order confirmation and price
@@ -27,7 +27,7 @@ Feature: Login user and add new address
     Then Order with status 'Awaiting check payment' and correct total
 
     Examples:
-      |email             |password |alias|address  |city  |zip   |country       |phone    |
-      |test@testshop.com |Padqwe1$ |Mr   |Polna 23 |London|55-100|United Kingdom|668956224|
+      |email            |password  |product                    |discount|price |size|itemsNumber|shipping  |payment         |
+      |test@testshop.com|Padqwe1$  |Hummingbird Printed Sweater|-20%    |€28.72|S   |5          |My carrier|Pay by bank wire|
 
 

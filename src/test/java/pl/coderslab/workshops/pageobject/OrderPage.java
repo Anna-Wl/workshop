@@ -32,10 +32,19 @@ public class OrderPage {
     private WebElement agreeToTermsOfServiceCheckbox;
     @FindBy(id="payment-confirmation")
     private WebElement orderWithAnObligationToPayButton;
+    private String paymentMethodChoosen;
+    private String shippingMethodChoosen;
 
     public OrderPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
+    }
 
+    public String getPaymentMethodChoosen() {
+        return paymentMethodChoosen;
+    }
+
+    public String getShippingMethodChoosen() {
+        return shippingMethodChoosen;
     }
 
     public void clickContinueToConfirmAddress() {
@@ -43,6 +52,7 @@ public class OrderPage {
     }
 
     public void chooseShippingMethod(String shippingMethod) {
+        shippingMethodChoosen = shippingMethod;
         if(shippingMethod.equals("PrestaShop")) {
             if(!shippingMethodDeliveryOptionPrestaShop.isSelected()) {
                 shippingMethodDeliveryOptionPrestaShop.click();
@@ -60,6 +70,7 @@ public class OrderPage {
     }
 
     public void choosePaymentMethod(String paymentMethod) {
+        paymentMethodChoosen = paymentMethod;
         if(paymentMethod.equals("Pay By Check")) {
             if(!paymentMethodPayByCheck.isSelected()) {
                 paymentMethodPayByCheck.click();

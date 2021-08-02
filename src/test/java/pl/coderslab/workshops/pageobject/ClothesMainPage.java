@@ -16,6 +16,7 @@ public class ClothesMainPage {
     private WebDriver driver;
     private String productPrice;
     private String productDiscount;
+    private String productNameChoosen;
 
 
     public ClothesMainPage(WebDriver driver) {
@@ -29,6 +30,10 @@ public class ClothesMainPage {
 
     public String getProductDiscount() {
         return productDiscount;
+    }
+
+    public String getProductNameChoosen() {
+        return productNameChoosen;
     }
 
     public String chooseProduct(String productName) {
@@ -75,5 +80,10 @@ public class ClothesMainPage {
 //        String resultProduct = newList.get(0);
 //        //System.out.println(resultProduct);
 //        return resultProduct;
+    }
+
+
+    public void saveProductName(String productName) {
+        productNameChoosen = productName;
     }
 }

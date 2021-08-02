@@ -1,5 +1,7 @@
 package pl.coderslab.workshops.pageobject;
 
+import com.sun.source.tree.AssertTree;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,6 +16,15 @@ public class ProductPage {
     private WebElement qtyUpButton;
     @FindBy(xpath = "//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button")
     private WebElement addToCartButton;
+    private String sizeChoosen;
+
+    public String getSizeChoosen() {
+        return sizeChoosen;
+    }
+
+    public void setSizeChoosen(String sizeChoosen) {
+        this.sizeChoosen = sizeChoosen;
+    }
 
     public ProductPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -22,6 +33,13 @@ public class ProductPage {
     public void chooseProductSize(String size) {
         Select sizeDropdownSelect = new Select(sizeDropdown);
         sizeDropdownSelect.selectByVisibleText(size);
+    }
+    public boolean isSizeAvailable() {
+        if(addToCartButton.isEnabled()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public void chooseItemsNumber(int numOfItems) {
@@ -32,6 +50,11 @@ public class ProductPage {
 
     public void addProductToCart() {
         addToCartButton.click();
+    }
+
+
+    public void saveProductSize(String size) {
+        sizeChoosen = size;
     }
 
 

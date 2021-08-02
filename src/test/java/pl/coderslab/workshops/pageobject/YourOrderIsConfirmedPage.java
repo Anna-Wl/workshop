@@ -21,6 +21,11 @@ public class YourOrderIsConfirmedPage {
     private String totalPriceReferenceNumber;
     @FindBy(xpath = "//*[@id=\"order-items\"]/div/table/tbody/tr[3]/td[2]")
     private WebElement totalPriceReference;
+    @FindBy(xpath = "//*[@id=\"order-details\"]/ul/li[3]")
+    private WebElement shippingMethodDisplayed;
+    String[] splitShippingMethodDisplayedText;
+    @FindBy(xpath = "//*[@id=\"order-items\"]/div/div/div[2]/span")
+    private WebElement productnameDisplayed;
 
     public YourOrderIsConfirmedPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -33,6 +38,14 @@ public class YourOrderIsConfirmedPage {
 
     public String getTotalPriceReferenceNumber() {
         return totalPriceReferenceNumber;
+    }
+
+    public String[] getSplitShippingMethodDisplayedText() {
+        return splitShippingMethodDisplayedText;
+    }
+
+    public void setSplitShippingMethodDisplayedText(String[] splitShippingMethodDisplayedText) {
+        this.splitShippingMethodDisplayedText = splitShippingMethodDisplayedText;
     }
 
     public void takeScreenshoot() throws IOException {
@@ -59,5 +72,20 @@ public class YourOrderIsConfirmedPage {
 //        int lastIndex = splitTotalPriceReferenceText.length-1;
 //        totalPriceReferenceNumber = splitTotalPriceReferenceText[lastIndex];
         totalPriceReferenceNumber = totalPriceReference.getText();
+    }
+
+
+    public String getShippingMethodDisplayed() {
+//        String shippingMethodDisplayedText = shippingMethodDisplayed.getText();
+//        splitShippingMethodDisplayedText = shippingMethodDisplayedText.split(" ");
+//        //int lastIndex = splitShippingMethodDisplayedText.length-1;
+//        String shippingMethodChoosen = splitShippingMethodDisplayedText[2];
+        String shippingMethodDisplayedText = shippingMethodDisplayed.getText();
+        return shippingMethodDisplayedText;
+    }
+
+    public String getProductNameDisplayed() {
+        String productNameDisplayedText = productnameDisplayed.getText();
+        return productNameDisplayedText;
     }
 }
