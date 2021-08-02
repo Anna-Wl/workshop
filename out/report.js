@@ -353,14 +353,14 @@ formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.openPageInBrowser(String)"
 });
 formatter.result({
-  "duration": 5316817900,
+  "duration": 4827376800,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.clickSignInLink()"
 });
 formatter.result({
-  "duration": 529667700,
+  "duration": 466322600,
   "status": "passed"
 });
 formatter.match({
@@ -373,7 +373,7 @@ formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.enterEmail(String)"
 });
 formatter.result({
-  "duration": 214257900,
+  "duration": 281058800,
   "status": "passed"
 });
 formatter.match({
@@ -386,21 +386,21 @@ formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.enterPassword(String)"
 });
 formatter.result({
-  "duration": 173158700,
+  "duration": 248602900,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.clickSignInButton()"
 });
 formatter.result({
-  "duration": 688503000,
+  "duration": 665204800,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.clickClothesLink()"
 });
 formatter.result({
-  "duration": 464610600,
+  "duration": 425130300,
   "status": "passed"
 });
 formatter.match({
@@ -413,7 +413,7 @@ formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.chooseProduct(String)"
 });
 formatter.result({
-  "duration": 910321000,
+  "duration": 678988200,
   "status": "passed"
 });
 formatter.match({
@@ -426,7 +426,7 @@ formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.isProductDiscontedWith20Percent(String)"
 });
 formatter.result({
-  "duration": 92400,
+  "duration": 94300,
   "status": "passed"
 });
 formatter.match({
@@ -439,7 +439,7 @@ formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.isProductPrice(String)"
 });
 formatter.result({
-  "duration": 94700,
+  "duration": 164600,
   "status": "passed"
 });
 formatter.match({
@@ -452,7 +452,7 @@ formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.chooseSize(String)"
 });
 formatter.result({
-  "duration": 2350277100,
+  "duration": 2344283000,
   "status": "passed"
 });
 formatter.match({
@@ -465,35 +465,35 @@ formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.chooseNumOfItems(int)"
 });
 formatter.result({
-  "duration": 2167583300,
+  "duration": 2164276700,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.addProductToBasket()"
 });
 formatter.result({
-  "duration": 2073769400,
+  "duration": 2086265000,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.clickProceedToCheckout()"
 });
 formatter.result({
-  "duration": 462327700,
+  "duration": 425096600,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.clickProceedToCheckoutonCartPage()"
 });
 formatter.result({
-  "duration": 457433800,
+  "duration": 418562300,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.clickContinueToConfirmAddress()"
 });
 formatter.result({
-  "duration": 638518400,
+  "duration": 615999500,
   "status": "passed"
 });
 formatter.match({
@@ -506,14 +506,14 @@ formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.chooseShippingMethod(String)"
 });
 formatter.result({
-  "duration": 51038300,
+  "duration": 43150000,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.clickContinueButtonToConfirmShippingMethod()"
 });
 formatter.result({
-  "duration": 646123800,
+  "duration": 634707200,
   "status": "passed"
 });
 formatter.match({
@@ -526,49 +526,49 @@ formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.choosePaymentMethod(String)"
 });
 formatter.result({
-  "duration": 136936300,
+  "duration": 140319400,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.clickAgreeToTheTermsOfService()"
 });
 formatter.result({
-  "duration": 97344600,
+  "duration": 111048300,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.clickorderWithAnObligationToPayButton()"
 });
 formatter.result({
-  "duration": 821462500,
+  "duration": 746354300,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.takeScreenshotOfOrderConfirmationAndPrice()"
 });
 formatter.result({
-  "duration": 451330100,
+  "duration": 601520900,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.clickUsernName()"
 });
 formatter.result({
-  "duration": 370961900,
+  "duration": 358808900,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.clickOrderHistoryAndDetails()"
 });
 formatter.result({
-  "duration": 2662126400,
+  "duration": 2674667800,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.orderStatusAwaitingCheckPaymentAndCorrectTotals()"
 });
 formatter.result({
-  "duration": 2186740200,
+  "duration": 2242423500,
   "status": "passed"
 });
 formatter.scenario({
@@ -736,14 +736,14 @@ formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.openPageInBrowser(String)"
 });
 formatter.result({
-  "duration": 3341995700,
+  "duration": 2427470200,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.clickSignInLink()"
 });
 formatter.result({
-  "duration": 458502300,
+  "duration": 491843900,
   "status": "passed"
 });
 formatter.match({
@@ -756,7 +756,7 @@ formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.enterEmail(String)"
 });
 formatter.result({
-  "duration": 354856100,
+  "duration": 198793000,
   "status": "passed"
 });
 formatter.match({
@@ -769,21 +769,21 @@ formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.enterPassword(String)"
 });
 formatter.result({
-  "duration": 337862200,
+  "duration": 290432200,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.clickSignInButton()"
 });
 formatter.result({
-  "duration": 692987800,
+  "duration": 636701700,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.clickClothesLink()"
 });
 formatter.result({
-  "duration": 541038800,
+  "duration": 465455900,
   "status": "passed"
 });
 formatter.match({
@@ -796,7 +796,7 @@ formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.chooseProduct(String)"
 });
 formatter.result({
-  "duration": 671710600,
+  "duration": 711498600,
   "status": "passed"
 });
 formatter.match({
@@ -809,7 +809,7 @@ formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.isProductDiscontedWith20Percent(String)"
 });
 formatter.result({
-  "duration": 76200,
+  "duration": 98000,
   "status": "passed"
 });
 formatter.match({
@@ -822,7 +822,7 @@ formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.isProductPrice(String)"
 });
 formatter.result({
-  "duration": 70800,
+  "duration": 100400,
   "status": "passed"
 });
 formatter.match({
@@ -835,7 +835,7 @@ formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.chooseSize(String)"
 });
 formatter.result({
-  "duration": 2474902500,
+  "duration": 2262046300,
   "status": "passed"
 });
 formatter.match({
@@ -848,35 +848,35 @@ formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.chooseNumOfItems(int)"
 });
 formatter.result({
-  "duration": 2113290600,
+  "duration": 2117343500,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.addProductToBasket()"
 });
 formatter.result({
-  "duration": 2097217300,
+  "duration": 2096780400,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.clickProceedToCheckout()"
 });
 formatter.result({
-  "duration": 445006900,
+  "duration": 414310600,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.clickProceedToCheckoutonCartPage()"
 });
 formatter.result({
-  "duration": 443218100,
+  "duration": 436226400,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.clickContinueToConfirmAddress()"
 });
 formatter.result({
-  "duration": 666129200,
+  "duration": 593745900,
   "status": "passed"
 });
 formatter.match({
@@ -889,14 +889,14 @@ formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.chooseShippingMethod(String)"
 });
 formatter.result({
-  "duration": 151394300,
+  "duration": 147992000,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.clickContinueButtonToConfirmShippingMethod()"
 });
 formatter.result({
-  "duration": 691938700,
+  "duration": 608103400,
   "status": "passed"
 });
 formatter.match({
@@ -909,49 +909,49 @@ formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.choosePaymentMethod(String)"
 });
 formatter.result({
-  "duration": 182981300,
+  "duration": 160662100,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.clickAgreeToTheTermsOfService()"
 });
 formatter.result({
-  "duration": 128341000,
+  "duration": 111183000,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.clickorderWithAnObligationToPayButton()"
 });
 formatter.result({
-  "duration": 1165120600,
+  "duration": 720787700,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.takeScreenshotOfOrderConfirmationAndPrice()"
 });
 formatter.result({
-  "duration": 496197300,
+  "duration": 468599300,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.clickUsernName()"
 });
 formatter.result({
-  "duration": 477749800,
+  "duration": 347441900,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.clickOrderHistoryAndDetails()"
 });
 formatter.result({
-  "duration": 2576920800,
+  "duration": 2390129100,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreLoginAndOrderPageObjSteps.orderStatusAwaitingCheckPaymentAndCorrectTotals()"
 });
 formatter.result({
-  "duration": 261140300,
+  "duration": 358552500,
   "status": "passed"
 });
 });

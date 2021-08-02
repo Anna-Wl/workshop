@@ -28,11 +28,15 @@ public class MyStoreLoginAddAddressPageObjSteps {
 
     @Given("^Page (.*) opened in browser$")
     public void openPageInBrowser(String url) {
+        //Ustawienie parametrów sterownika przeglądarki
         System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
+        //Uruchomienie przeglądarki Chrome
         this.driver = new ChromeDriver();
         this.driver.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
+        //Otworzenie strony
         this.driver.get(url);
        // driver.manage().window().maximize();
+        //Towrzenie obiektow
         this.homePage = new MyStoreHomePage(this.driver);
         this.logInPage = new MyStoreLogInPage(this.driver);
         this.accountPage = new YourAccountPage(this.driver);

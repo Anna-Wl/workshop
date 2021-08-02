@@ -24,6 +24,10 @@ public class ClothesMainPage {
         this.driver = driver;
     }
 
+    public void setProductNameChoosen(String productNameChoosen) {
+        this.productNameChoosen = productNameChoosen;
+    }
+
     public String getProductPrice() {
         return productPrice;
     }
@@ -44,7 +48,6 @@ public class ClothesMainPage {
         ArrayList<String> allProductList = new ArrayList<String>();
 
         List<WebElement> priceList = driver.findElements(By.xpath("//*[@class='price']"));
-        //someText = productTitleList1.get(0).getText();
         List<WebElement> discountList = driver.findElements(By.xpath("//*[@class='discount-percentage discount-product']"));
 
         for(int i = 0; i < productTitleList.size(); i++) {
@@ -58,13 +61,8 @@ public class ClothesMainPage {
                 }
         }
 
-        //System.out.println(newList);
         String resultProduct = newList.get(0);
-        //System.out.println(resultProduct);
         return resultProduct;
     }
 
-    public void saveProductName(String productName) {
-        productNameChoosen = productName;
-    }
 }

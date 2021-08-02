@@ -8,7 +8,6 @@ import org.openqa.selenium.support.ui.Select;
 import pl.coderslab.workshops.NewAddressData;
 import pl.coderslab.workshops.UserBasicData;
 
-
 public class NewAddressPage {
     @FindBy(xpath = "//*[@name='alias']")
     private WebElement aliasInput;

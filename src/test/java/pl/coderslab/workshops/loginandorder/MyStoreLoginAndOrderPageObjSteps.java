@@ -23,6 +23,7 @@ import java.util.concurrent.TimeUnit;
 import static org.junit.Assert.*;
 
 public class MyStoreLoginAndOrderPageObjSteps {
+    //Deklaracja pol
     private WebDriver driver;
     private MyStoreHomePage homePage;
     private MyStoreLogInPage logInPage;
@@ -37,11 +38,15 @@ public class MyStoreLoginAndOrderPageObjSteps {
 
     @Given("^Page (.*) opened in browser$")
     public void openPageInBrowser(String url) {
+        //Ustawienie parametrów sterownika przeglądarki
         System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
+        //Uruchomienie przeglądarki Chrome
         this.driver = new ChromeDriver();
-      //  this.driver.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
+        // this.driver.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
+        //Otworzenie strony
         this.driver.get(url);
-       // driver.manage().window().maximize();
+        // driver.manage().window().maximize();
+        //Towrzenie obiektow
         this.homePage = new MyStoreHomePage(this.driver);
         this.logInPage = new MyStoreLogInPage(this.driver);
         this.accountPage = new YourAccountPage(this.driver);
@@ -84,7 +89,7 @@ public class MyStoreLoginAndOrderPageObjSteps {
         String resultProduct = clothesMainPage.chooseProduct(productName);
         System.out.println(resultProduct);
         assertEquals(productName, resultProduct);
-        clothesMainPage.saveProductName(productName);
+        clothesMainPage.setProductNameChoosen(productName);
     }
 
     @And("^Discount for product is '(.*)'$")
@@ -103,7 +108,8 @@ public class MyStoreLoginAndOrderPageObjSteps {
     public void chooseSize(String size) throws InterruptedException {
         productPage.chooseProductSize(size);
         Thread.sleep(2000);
-        productPage.saveProductSize(size);
+        productPage.setSizeChoosen(size);
+
         System.out.println(productPage.isSizeAvailable());
         if(!productPage.isSizeAvailable()) {
             productPage.chooseProductSize("M");
@@ -118,7 +124,7 @@ public class MyStoreLoginAndOrderPageObjSteps {
     public void chooseNumOfItems(int numOfItems) throws InterruptedException {
         Thread.sleep(2000);
         productPage.chooseItemsNumber(numOfItems);
-        productPage.saveQuantity(numOfItems);
+        productPage.setQtyChoosen(numOfItems);
     }
 
     @And("^Add product to basket$")

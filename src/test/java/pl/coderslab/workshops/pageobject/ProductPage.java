@@ -1,8 +1,5 @@
 package pl.coderslab.workshops.pageobject;
 
-import com.sun.source.tree.AssertTree;
-import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -25,6 +22,10 @@ public class ProductPage {
 
     public void setSizeChoosen(String sizeChoosen) {
         this.sizeChoosen = sizeChoosen;
+    }
+
+    public void setQtyChoosen(int qtyChoosen) {
+        this.qtyChoosen = qtyChoosen;
     }
 
     public int getQtyChoosen() {
@@ -57,11 +58,4 @@ public class ProductPage {
         addToCartButton.click();
     }
 
-    public void saveProductSize(String size) {
-        sizeChoosen = size;
-    }
-
-    public void saveQuantity(int numOfItems) {
-        qtyChoosen = numOfItems;
-    }
 }
