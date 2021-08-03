@@ -18,7 +18,6 @@ public class ClothesMainPage {
     private String productDiscount;
     private String productNameChoosen;
 
-
     public ClothesMainPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
         this.driver = driver;

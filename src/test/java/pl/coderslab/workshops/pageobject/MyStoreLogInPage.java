@@ -14,6 +14,8 @@ public class MyStoreLogInPage {
     private WebElement passwordToLogin;
     @FindBy(id="submit-login")
     private WebElement signInButton;
+    @FindBy(xpath = "//*[@id='content']/div/a")
+    private WebElement createAccountLink;
 
     public MyStoreLogInPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -31,5 +33,9 @@ public class MyStoreLogInPage {
     public void enterPassword(String password) {
         passwordToLogin.clear();
         passwordToLogin.sendKeys(password);
+    }
+
+    public void clickRegistrationLink() {
+        createAccountLink.click();
     }
 }

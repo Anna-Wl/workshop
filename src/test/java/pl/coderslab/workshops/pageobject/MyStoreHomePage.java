@@ -10,6 +10,8 @@ public class MyStoreHomePage {
     private WebElement signInLink;
     @FindBy(xpath = "//*[@id='_desktop_user_info']/div/a[2]")
     private WebElement userNameLink;
+    @FindBy(xpath = "//*[@id='_desktop_user_info']/div/a[2]/span")
+    private WebElement userNameText;
 
     public MyStoreHomePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -21,5 +23,9 @@ public class MyStoreHomePage {
 
     public void clickUserNameLink() {
         userNameLink.click();
+    }
+
+    public String getSignedInUserName() {
+        return userNameText.getText();
     }
 }
