@@ -1,6 +1,6 @@
-Feature: Login user and add new address
+Feature: Login user and order product
 
-  Scenario Outline: Login user and add address
+  Scenario Outline: Login user and order
     Given Page https://prod-kurs.coderslab.pl/index.php opened in browser
     When Click 'Sign in' link
     And Enter email '<email>'

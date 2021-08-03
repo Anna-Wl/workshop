@@ -1,5 +1,6 @@
 Feature: Create user account
 
+
   Scenario Outline: Create user account
     Given Page https://prod-kurs.coderslab.pl/index.php opened in browser
     When Click 'Sign in' link

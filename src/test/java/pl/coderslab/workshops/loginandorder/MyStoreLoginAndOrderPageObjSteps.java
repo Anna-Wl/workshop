@@ -8,6 +8,7 @@ import cucumber.api.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import pl.coderslab.workshops.Base;
 import pl.coderslab.workshops.NewAddressData;
 import pl.coderslab.workshops.UserBasicData;
 import pl.coderslab.workshops.pageobject.*;
@@ -22,7 +23,7 @@ import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.*;
 
-public class MyStoreLoginAndOrderPageObjSteps {
+public class MyStoreLoginAndOrderPageObjSteps extends Base {
     //Deklaracja pol
     private WebDriver driver;
     private MyStoreHomePage homePage;
@@ -37,12 +38,8 @@ public class MyStoreLoginAndOrderPageObjSteps {
     private OrderHistoryPage orderHistoryPage;
 
     @Given("^Page (.*) opened in browser$")
-    public void openPageInBrowser(String url) {
-        //Ustawienie parametrów sterownika przeglądarki
-        System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
-        //Uruchomienie przeglądarki Chrome
-        this.driver = new ChromeDriver();
-        // this.driver.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
+    public void openPageInBrowser(String url) throws IOException {
+        this.driver = initializeDriver();
         //Otworzenie strony
         this.driver.get(url);
         // driver.manage().window().maximize();

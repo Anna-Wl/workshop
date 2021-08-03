@@ -7,16 +7,18 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import pl.coderslab.workshops.Base;
 import pl.coderslab.workshops.NewAddressData;
 import pl.coderslab.workshops.UserBasicData;
 import pl.coderslab.workshops.pageobject.*;
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-public class MyStoreLoginAddAddressPageObjSteps {
+public class MyStoreLoginAddAddressPageObjSteps extends Base {
     private WebDriver driver;
     private MyStoreHomePage homePage;
     private MyStoreLogInPage logInPage;
@@ -27,12 +29,13 @@ public class MyStoreLoginAddAddressPageObjSteps {
     private UserBasicData userBasicData;
 
     @Given("^Page (.*) opened in browser$")
-    public void openPageInBrowser(String url) {
-        //Ustawienie parametrów sterownika przeglądarki
-        System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
-        //Uruchomienie przeglądarki Chrome
-        this.driver = new ChromeDriver();
-        this.driver.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
+    public void openPageInBrowser(String url) throws IOException {
+//        //Ustawienie parametrów sterownika przeglądarki
+//        System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
+//        //Uruchomienie przeglądarki Chrome
+//        this.driver = new ChromeDriver();
+//        this.driver.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
+        this.driver = initializeDriver();
         //Otworzenie strony
         this.driver.get(url);
        // driver.manage().window().maximize();
